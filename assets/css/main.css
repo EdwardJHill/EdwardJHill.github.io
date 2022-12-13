@@ -2752,7 +2752,7 @@ input, select, textarea {
 
 			#header > header p {
 				color: #ffffff;
-				font-style: italic;
+				/*font-style: italic;*/
 				margin: 1em 0 0 0;
 			}
 
