@@ -65,11 +65,11 @@
 										 <h4>Override Global New and Delete</h4>
 										 <h4>Headers and Footers</h4>
 										 <h4>Memory Pool</h4>
-										Created a memory management system that utilized headers and footers to track the size of the memory allocated and detect buffer overrun. I also optimized the collisions by using spatial partitioning with multiple threads to parallelise the calculations.
-									</p>
+										
 									<h3>Spatial Partitioning</h3>
 									<p>
-										<h4></h4>
+										In the framework given, basic collision was implemented by keeping track of all collider objects in one list and 
+										then each frame going through the list and checking if any of the objects are colliding. This method works but is very inefficient with high object counts due to a lack of parralelization. 
 									</p>
 									<div class="youtube"><iframe width="560" height="315" src="https://www.youtube.com/embed/sDTixwUkJ2s?si=WEw6oCUGsAV2_2gC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> </div>
 								</div> <!-- change video titles -->
