@@ -63,7 +63,7 @@
 									<p>
 										<!-- code snippets rhys gives you thing gifs more pictures -->
 										 <h4>Override Global New and Delete</h4>
-										 
+										 I am a little goblin and I think that to begin managing memory you must first interface with that which creates and deletes it.
 										 <h4>Headers and Footers</h4>
 										 <p>check if corrupt talk about all the things they can do the post a picture of the log</p>
 										 <h4>Memory Pool</h4>
@@ -72,7 +72,9 @@
 									<h3>Multi-threaded Optimisations</h3>
 									<p>
 										In the framework given, basic collision was implemented by keeping track of all collider objects in one list and 
-										then each frame going through the list and checking if any of the objects are colliding. This method works but is very inefficient with high object counts due to a lack of parralelization. 
+										then each frame going through the list and checking if any of the objects are colliding and resolving them. This method works but is very inefficient at higher object counts due to a lack of parralelization. 
+										To allow multi threading to speed up this task the list would need to broken down. This was achieved through spatial partitioning, a process in which the game area is split into sections and each section creates a list of objects within. 
+										A thread is created for each section and is tasked with going through the list and checking for ,and resloving, collisions. At higher object counts this reduces processing time massivley, modern cpus are built with parrallzied tasks in mind and so coding to those strengths 
 									</p>
 									<div class="youtube"><iframe width="560" height="315" src="https://www.youtube.com/embed/sDTixwUkJ2s?si=WEw6oCUGsAV2_2gC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> </div>
 								</div> <!-- change video titles -->
