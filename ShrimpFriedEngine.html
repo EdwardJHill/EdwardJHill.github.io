@@ -26,9 +26,6 @@
 				<nav id="nav">
 					<ul>
 						<li><a href="index.html#one" >About</a></li>
-						<!--
-	<li><a href="#two">Things I Can Do</a></li>
-		-->
 						<li><a href="index.html#three">Projects</a></li>
 					</ul>
 				</nav>
@@ -51,25 +48,32 @@
 						<!-- One -->
 							<section id="one">
 								<div class="image main" data-position="center">
-									<img src="images/banner.jpg" alt="" />
+									<img src="images/LLPO Banner.png" alt="" />
 								</div>
 								<div class="container">
 									<header class="major">
-										<h2></h2>
-										<p>Sound Effect Generator
-										</p>
-									</header>
-									<h3>Inspiration</h3>
-									<p>
+										<h2>Shrimp-Fried Engine</h2>
 										
-										Programmer and Voice Actor for a collaborative university project titled "Midnight Taxi", where I programmed some of the objects in the car and played the driving instructor in the first level and the radio host for levels 1 and 2.
+									</header>
+									<p>
+										This group project was completed as a part of the Cross-Platform Engine Development module at Staffs Uni, and tasked a group of 9 to create a 2D game engine that could run on at least 2 platforms. I was the sole audio programmer on the project and was tasked with creating an audio engine that would work on PS4 and Windows, the two platforms we had chosen.
 									</p>
-										<div class="youtube"><iframe width="560" height="315" src="https://www.youtube.com/embed/UgQqs1xaiwk?si=LBvNplo-2aFIHKtN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> </div>
-								</div>
+									<h3>Audio Engine Overview</h3>
+									<p>
+
+									<h3>Roadblocks Overcome</h3>
+									<p>
+									At the beginning of the project the plan was to have two separate audio libraries that would work on each platform. An abstraction layer would then swap between the two libraries depending on the platform it was being run on. For this OpenAL was chosen for Windows and the library for PS4 would be decided on a later date. When the abstraction layer and OpenAL were completed I began looking into PS4 audio libraries with similar feature sets to OpenAL, but found nothing that would easily fit into the abstraction layer created. 
+									</p>
+									<p>
+									As no PS4 libraries suited the engine's needs I decided to use FMOD for the PS4. However, after using FMOD I realised that it offered much more functionality than OpenAL and worked on our target platforms seamlessly. I made the decision to adopt FMOD as our audio library for both platforms. As such, the work that I had done on both the abstraction layer and OpenAL was no longer needed. Some of the code written was reworked and other portions were removed. It would have been beneficial if more planning had been done from the outset of the project to determine what audio API would be most suited to the team's goals and I would have likely been able to allocate time more appropriately and integrate more features into my audio backend. 
+									</p>
+									<div class="youtube"><iframe width="560" height="315" src="https://www.youtube.com/embed/sDTixwUkJ2s?si=WEw6oCUGsAV2_2gC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> </div>
+								</div> <!-- change video titles -->
 							</section>
 
 						<!-- Two 
-							<section id="two">
+							<section id="two">Roa
 								<div class="container">
 									<h3>Things I aCan Do</h3>
 									<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer non. Adipiscing cubilia elementum integer lorem ipsum dolor sit amet.</p>
