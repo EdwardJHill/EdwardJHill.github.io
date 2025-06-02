@@ -48,7 +48,7 @@
 						<!-- One -->
 							<section id="one">
 								<div class="image main" data-position="center">
-									<img src="images/Shrimp fried banner for page.png" alt="" />
+									<img src="images/SFE banner.png" alt="" />
 								</div>
 								<div class="container">
 									<header class="major">
@@ -58,9 +58,24 @@
 									<p>
 										This group project was completed as a part of the Cross-Platform Engine Development module at Staffs Uni, and tasked a group of 9 to create a 2D game engine that could run on at least 2 platforms. I was the sole audio programmer on the project and was tasked with creating an audio engine that would work on PS4 and Windows, the two platforms we had chosen.
 									</p>
+									<div class="youtube"><iframe width="560" height="315" src="https://www.youtube.com/embed/8nNUqA7uEHA?si=k_baLK8QRSSeAfjS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> </div>
 									<h3>Audio Engine Overview</h3>
 									<p>
+									The Audio Engine uses FMOD Core API throughout and features four main parts in allowing the engine to play Audio. 
+									</p>
+									<p>
+										Buffers use FMOD Core's Sound object to load and store audio data given by the engine. Buffers  hold audio data for sources. Many sources can go use one buffer saving data by not requiring each source have its own audio data. Buffers can be streamed to save memory very useful for long audio tracks such as background music.
+									</p>
+									<p>
+										Sources use FMOD Core's Channel object to play audio stored within in a buffer. Sources feature playback functions allowing the audio to be played, paused, rewound and stopped. Sources can have their position and velocities set which allows the audio engine to  create 3d soundscapes.
 
+									</p>
+									<p>
+										One Listener exists in the scene which uses FMOD Core's Listener to "hear" the sources being played. It can also have its position set and be used for audio spatialisation acting as the stand in for the user's ears which the sources play sounds around.
+									</p>
+									<p>
+										The Sound Engine class keeps track of all these objects by handling creation and deletion of buffers and sources as well queries from the scripts. Buffers and sources are put into two separate unordered maps and encapsulated away so nothing else can access them. Upon creation of either, a integer is returned which scripting can use to manipulate the corresponding buffer or source by calling a function Sound Engine function with the integer as an input.
+									</p>
 									<h3>Roadblocks Overcome</h3>
 									<p>
 									At the beginning of the project the plan was to have two separate audio libraries that would work on each platform. An abstraction layer would then swap between the two libraries depending on the platform it was being run on. For this OpenAL was chosen for Windows and the library for PS4 would be decided on a later date. When the abstraction layer and OpenAL were completed I began looking into PS4 audio libraries with similar feature sets to OpenAL, but found nothing that would easily fit into the abstraction layer created. 
@@ -68,7 +83,16 @@
 									<p>
 									As no PS4 libraries suited the engine's needs I decided to use FMOD for the PS4. However, after using FMOD I realised that it offered much more functionality than OpenAL and worked on our target platforms seamlessly. I made the decision to adopt FMOD as our audio library for both platforms. As such, the work that I had done on both the abstraction layer and OpenAL was no longer needed. Some of the code written was reworked and other portions were removed. It would have been beneficial if more planning had been done from the outset of the project to determine what audio API would be most suited to the team's goals and I would have likely been able to allocate time more appropriately and integrate more features into my audio backend. 
 									</p>
-									<div class="youtube"><iframe width="560" height="315" src="https://www.youtube.com/embed/sDTixwUkJ2s?si=WEw6oCUGsAV2_2gC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> </div>
+									
+									<p>Build by <a href="https://github.com/hech11">Neil Punj</a></p>
+									<p>Physics by <a href="https://github.com/Jonathan-L-Davidson">Johnathan Davidson</a></p>
+									<p>Graphics by <a href="https://github.com/rhysaelliott">Rhys Elliott</a></p>
+									<p>Input by <a href="https://github.com/PointAbi">Abi Radage-Revell</a></p>
+									<p>AI by <a href="https://github.com/EmmieHarrisStaffs">Emmie Harris</a></p>
+									<p>Serialisation by <a href="https://github.com/AlexConnor3958">Alex Connor</a></p>
+									<p>Utilities by <a href="https://github.com/SamFairclough">Sam Fairclough</a></p>
+									<p>Logging by <a href="https://github.com/Owoolu">James Durant</a></p>
+									
 								</div> <!-- change video titles -->
 							</section>
 
