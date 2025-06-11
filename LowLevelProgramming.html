@@ -67,7 +67,10 @@
 									<h3>Memory Management</h3>
 									<p>
 										<!-- code snippets rhys gives you thing gifs more pictures -->
-
+										Three main memory management techniques were implemented headers and footers, trackers and memory pools.<br><br>
+Headers and footers are placed either side of newly allocated data, they can be given any data to hold. In my project the header holds the headers address, the size of the data between the header and the footer, the address of the next header, a Boolean denoting whether or not the data is in a memory pool and a check value used for detecting if the memory is corrupt. The footer contains another int used for detecting if the memory is corrupt.<br><br>
+The tracker class holds the first and last header to facilitate walking the heap, a powerful tool that helps verify the integrity of the memory. This is done by starting from the first header stored in the tracker and going to the next address stored in that header. This process is repeated until the current header's next address reads null and if that address matches up with the tracker's last header then the memory is in good condition.<br><br>
+The memory pool allocates a given chunk of memory into uniform sections and then divvies these out to variables wishing to be created. When variables are created or deleted they don't have to go through the process of being allocated and deallocated in memory. When they are created they write data to a section in the memory pool and the memory pool marks this section as being taken up. When the data is deleted the memory pool marks its section as free allowing it to be overwritten. <br><br>
 										
 									<h3>Multi-threaded Optimisations</h3>
 									<p>
