@@ -64,7 +64,14 @@
 										This project was created for my final year dissertation titled "Objectively Analysing Musical Improvisations for use in Games". The dissertation explores the viability of a "musical" game, which tests more musical skills than a rhythm game would. This project, created as the artefact, uses new and experimental technology in Unreal Engine 5 to test the player's ability to harmonise over a given backing track.
 									</p>
 									<div class="youtube"><iframe width="560" height="315" src="https://www.youtube.com/embed/TlQy0je23CI?si=7pjyV9rrp6iq_RJD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> </div>
-									
+									<br>
+									<h3>Artefact Overview</h3>
+									<p>
+										In the artefact the only player input is into a virtual piano which is playable with the computer keyboard. Pressing one of the keys on the keyboard plays the corresponding note on the piano. Once the game is started a midi backing track is played, it is a 12 bar blues beginning on g. The game has a hard coded lead sheet of the keys in each bar. When the player plays a note on the virtual piano it is determined whether or not this is in key with the backing track, if it is it is counted as a correct note, if it is not then it is counted as an incorrect note. The game determines if a note is correct by calculating which keys on the virtual piano are in harmony with the given backing track and writing that to an array of booleans which corresponds to keys of the piano. This is done with the lead sheet which determines the harmonic key of each bar of the backing track. The game knows which bar is being played using the experimental Harmonix plugin in MetaSounds, which plays the midi file. Because midi files contain rhythmic information they can be parsed to determine which bar is being played. Harmonix has a node which sends a trigger out when a new bar is being played. This then triggers a recalculation of the correct incorrect array of booleans with the current key in the lead sheet according to the bar number. <br><br>
+									This project uses relatively new features in Unreal Engine 5. the afore mentioned Harmonix plugin is still experimental but also when the bar number counter ticks up the MetaSounds file is sending a trigger to a blueprint file which only in July 2024 became a feature.
+									<br><br>
+									<p>You can download my dissertation<a href ="assets/H013967m Edward Hill Dissertation.pdf" > here.</a></p>
+									</p>
 								</div> <!-- change video titles -->
 							</section>
 
